@@ -9,7 +9,7 @@ This fork of [Mail-in-a-Box](https://github.com/mail-in-a-box/mailinabox) intend
 
 As of writing (28th October 2016) this fork is stable and working, and qualifies for production usage.
 
-**NOTE**: There is NO upgrade/migration path from older Mail-in-a-Box installations.
+**NOTE**: There is NO upgrade/migration path from older Mail-in-a-Box installations.  This is a test REPO for converting to Debian.
 
 * * *
 
@@ -47,6 +47,12 @@ It also includes:
 
 For more information on how Mail-in-a-Box handles your privacy, see the [security details page](security.md).
 
+Pre Install
+------------
+Please install git with 
+
+apt install -y git
+
 Installation
 ------------
 
@@ -54,12 +60,12 @@ Start with a completely fresh (really, I mean it) Ubuntu 16.04 LTS 64-bit machin
 
 Clone this repository:
 
-	$ git clone https://github.com/bdacus01/mailinabox-sogo
-	$ cd mailinabox
+	git clone https://github.com/bdacus01/mailinabox-sogo
+	cd mailinabox-sogo
 
 Begin the installation.
 
-	$ sudo setup/start.sh
+	sudo setup/start.sh
 
 The Acknowledgements
 --------------------
