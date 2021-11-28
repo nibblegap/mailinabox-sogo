@@ -20,10 +20,10 @@ if [ ! -d $MYSQL_DATADIR ]; then
     # Move the datadir to $STORAGE_ROOT/mail/mysql/ for backup reasons
 
     # Stop the MySQL daemon as we're editing the config file
-    service mysql stop >> /dev/null
+    service mariadb stop >> /dev/null
 
     # Change the datadir location for MySQL
-    tools/editconf.py /etc/mysql/mysql.conf.d/mysqld.cnf datadir=$MYSQL_DATADIR
+    tools/editconf.py /etc/mysql/mariadb.conf.d/50-server.cnf datadir=$MYSQL_DATADIR
 
     # Create the new database location in our $STORAGE_ROOT
     mkdir -p $MYSQL_DATADIR
