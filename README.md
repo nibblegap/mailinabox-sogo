@@ -47,9 +47,11 @@ For more information on how Mail-in-a-Box handles your privacy, see the [securit
 
 ## Pre Install
 
+Makes sure you setup all the normal items like Hostname and Timezome
+
 Please install git with
 
-		apt install -y git
+ apt install -y git
 
 ## Installation
 
