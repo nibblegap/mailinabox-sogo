@@ -9,7 +9,7 @@ if [ -z "$NONINTERACTIVE" ]; then
 	if [ ! -f /usr/bin/dialog ] || [ ! -f /usr/bin/python3 ] || [ ! -f /usr/bin/pip3 ]; then
 		echo Installing packages needed for setup...
 		apt-get -q -q update
-		apt_get_quiet install dialog python3 python3-pip mysql-client libmysqlclient-dev || exit 1
+		apt_get_quiet install dialog python3 python3-pip mariadb-client libmariadb-dev || exit 1
 	fi
 
 	# email_validator is repeated in setup/management.sh
