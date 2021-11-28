@@ -7,7 +7,7 @@ echo "Installing Mail-in-a-Box system management daemon..."
 # Install packages.
 # flask, yaml, dnspython, and dateutil are all for our Python 3 management daemon itself.
 # duplicity does backups. python-pip is so we can 'pip install boto' for Python 2, for duplicity, so it can do backups to AWS S3.
-apt_install python3-flask links duplicity libyaml-dev python3-dnspython python3-dateutil python-pip python-dev
+apt_install python3-flask links duplicity libyaml-dev python3-dnspython python3-dateutil python3-pip python3-dev python3-boto3
 
 # These are required to pip install cryptography.
 apt_install build-essential libssl-dev libffi-dev python3-dev
@@ -17,12 +17,14 @@ apt_install build-essential libssl-dev libffi-dev python3-dev
 # NOTE: email_validator is repeated in setup/questions.sh, so please keep the versions synced.
 hide_output pip3 install --upgrade \
 	rtyaml "email_validator>=1.0.0" "free_tls_certificates>=0.1.3" \
-	"idna>=2.0.0" "cryptography>=1.0.2" boto psutil
+	"idna>=2.0.0" "cryptography>=1.0.2" psutil
+
+#boto
 
 # duplicity uses python 2 so we need to get the python 2 package of boto to have backups to S3.
 # boto from the Ubuntu package manager is too out-of-date -- it doesn't support the newer
 # S3 api used in some regions, which breaks backups to those regions.  See #627, #653.
-hide_output pip install --upgrade boto
+#hide_output pip install --upgrade boto
 
 # Create an systemd script to start Management daemon
 LOCATION=`pwd`
