@@ -94,10 +94,7 @@ apt_get_quiet upgrade
 # * bc: allows us to do math to compute sane defaults
 
 echo Installing system packages...
-apt_install python3 python3-dev python3-pip \
-	netcat-openbsd wget curl git sudo coreutils bc \
-	haveged pollinate \
-	unattended-upgrades cron ntp fail2ban
+apt_install python3 python3-dev python3-pip netcat-openbsd wget curl git sudo coreutils bc haveged pollinate unattended-upgrades cron ntp fail2ban
 
 # ### Set the system timezone
 #
