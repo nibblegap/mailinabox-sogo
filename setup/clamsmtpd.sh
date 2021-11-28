@@ -9,7 +9,7 @@ echo "Installing Clamsmtpd (ClamAV e-mail virus scanning)..."
 
 
 # Install clamav-daemon & clamsmtpd with additional scanning formats
-apt_install sqlite clamav-daemon clamav clamsmtp unzip p7zip zip arj bzip2 cabextract cpio file gzip lhasa nomarch pax rar unrar unzip zip
+apt_install sqlite3 clamav-daemon clamav clamsmtp unzip p7zip zip arj bzip2 cabextract cpio file gzip lhasa nomarch pax rar unrar unzip zip
 
 # Config /etc/clamsmtpd.conf
 # Config edits do the following:
