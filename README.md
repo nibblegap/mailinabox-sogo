@@ -54,7 +54,7 @@ Start with a completely fresh (really, I mean it) Ubuntu 16.04 LTS 64-bit machin
 
 Clone this repository:
 
-	$ git clone https://github.com/jkaberg/mailinabox-sogo
+	$ git clone https://github.com/bdacus01/mailinabox-sogo
 	$ cd mailinabox
 
 Begin the installation.
