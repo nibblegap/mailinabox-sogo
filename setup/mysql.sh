@@ -2,9 +2,9 @@
 source setup/functions.sh # load our functions
 source /etc/mailinabox.conf # load global vars
 
-echo "Installing MySQL server..."
+echo "Installing MariaDB server..."
 
-apt_install mysql-server
+apt_install mariadb-server
 
 # We need this password for later to auth Dovecot, Postfix and SOGo.
 # TODO: This isn't optimal. We should do better... later...
