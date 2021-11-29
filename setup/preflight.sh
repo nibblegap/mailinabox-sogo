@@ -8,7 +8,7 @@ if [[ $EUID -ne 0 ]]; then
 	exit
 fi
 
-# Check that we are running on Ubuntu 16.04 LTS (or 16.04.xx).
+# Check that we are running on Debian 10 or higher.
 if [ "$(lsb_release -i)" = "Debian" ] && [ "$(lsb_release -r)" -gt "9" ]; then
 	echo "Mail-in-a-Box only supports being installed on Ubuntu 16.04, sorry. You are running:"
 	echo
